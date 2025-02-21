@@ -8,7 +8,7 @@ import SwiftUI
 struct exampleBookExplorerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Text("Hello, world!")
         }
     }
 }
