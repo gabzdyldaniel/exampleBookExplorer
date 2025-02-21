@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		76CDAF3C2D68B8D400D548D3 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 76CDAF3B2D68B8D400D548D3 /* Swinject */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		76CDAEFD2D68B52D00D548D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CDAF3C2D68B8D400D548D3 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = exampleBookExplorer;
 			packageProductDependencies = (
+				76CDAF3B2D68B8D400D548D3 /* Swinject */,
 			);
 			productName = exampleBookExplorer;
 			productReference = 76CDAEEC2D68B52B00D548D3 /* exampleBookExplorer.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 76CDAEE32D68B52B00D548D3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				76CDAF3A2D68B8D400D548D3 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 76CDAEED2D68B52B00D548D3 /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		76CDAF3A2D68B8D400D548D3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		76CDAF3B2D68B8D400D548D3 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76CDAF3A2D68B8D400D548D3 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 76CDAEE42D68B52B00D548D3 /* Project object */;
 }
