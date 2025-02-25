@@ -15,7 +15,7 @@ fileprivate let assembler: Assembler = {
 
 func dataSourceAssembly() -> Assembly {
     // TODO: Split into multiple configurations and use assembly according to the environment
-    return MockDataSourceAssembly()
+    return RemoteDataSourceAssembly()
 }
 
 func inject<Service>(_ serviceType: Service.Type) -> Service {
