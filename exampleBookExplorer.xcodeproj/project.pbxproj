@@ -33,9 +33,68 @@
 		76CDAF062D68B52D00D548D3 /* exampleBookExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exampleBookExplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7626F25C2D6C6EB300305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorerTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Localizable.xcstrings,
+				Sources/Core/Network/HTTPClient.swift,
+				Sources/Core/Protocols/DTO.swift,
+				Sources/Data/Volume/DataSource/VolumeDataSource.swift,
+				Sources/Data/Volume/DataSource/VolumeDataSourceMock.swift,
+				Sources/Data/Volume/DataSource/VolumeDataSourceRemote.swift,
+				Sources/Data/Volume/DTO/VolumeDTO.swift,
+				"Sources/Data/Volume/DTO/VolumeDTO+TestData.swift",
+				Sources/Data/Volume/DTO/VolumesResponseDTO.swift,
+				Sources/Domain/Book/Entity/Book.swift,
+				Sources/Domain/Book/UseCase/BookUseCase.swift,
+				Sources/Presentation/Book/BookCellImage.swift,
+				Sources/Presentation/Book/BookCellView.swift,
+				Sources/Presentation/Book/BookDetailView.swift,
+				Sources/Presentation/Book/BookListView.swift,
+				"Sources/Presentation/Book/BookListView+ViewModel.swift",
+			);
+			target = 76CDAEFB2D68B52D00D548D3 /* exampleBookExplorerTests */;
+		};
+		7626F25D2D6C6EB300305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorerUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Localizable.xcstrings,
+				Sources/Core/Network/HTTPClient.swift,
+				Sources/Core/Protocols/DTO.swift,
+				Sources/Data/Volume/DataSource/VolumeDataSource.swift,
+				Sources/Data/Volume/DataSource/VolumeDataSourceMock.swift,
+				Sources/Data/Volume/DataSource/VolumeDataSourceRemote.swift,
+				Sources/Data/Volume/DTO/VolumeDTO.swift,
+				"Sources/Data/Volume/DTO/VolumeDTO+TestData.swift",
+				Sources/Data/Volume/DTO/VolumesResponseDTO.swift,
+				Sources/Domain/Book/Entity/Book.swift,
+				Sources/Domain/Book/UseCase/BookUseCase.swift,
+				Sources/Presentation/Book/BookCellImage.swift,
+				Sources/Presentation/Book/BookCellView.swift,
+				Sources/Presentation/Book/BookDetailView.swift,
+				Sources/Presentation/Book/BookListView.swift,
+				"Sources/Presentation/Book/BookListView+ViewModel.swift",
+			);
+			target = 76CDAF052D68B52D00D548D3 /* exampleBookExplorerUITests */;
+		};
+		7626F31F2D6C774700305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 76CDAEEB2D68B52B00D548D3 /* exampleBookExplorer */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		76CDAEEE2D68B52B00D548D3 /* exampleBookExplorer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7626F31F2D6C774700305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorer" target */,
+				7626F25C2D6C6EB300305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorerTests" target */,
+				7626F25D2D6C6EB300305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorerUITests" target */,
+			);
 			path = exampleBookExplorer;
 			sourceTree = "<group>";
 		};
@@ -198,6 +257,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = 76CDAEE32D68B52B00D548D3;
 			minimizedProjectReferenceProxies = 1;
@@ -280,6 +340,8 @@
 /* Begin XCBuildConfiguration section */
 		76CDAF0E2D68B52D00D548D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 76CDAEEE2D68B52B00D548D3 /* exampleBookExplorer */;
+			baseConfigurationReferenceRelativePath = Sources/App/Configuration/Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -337,12 +399,15 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		76CDAF0F2D68B52D00D548D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 76CDAEEE2D68B52B00D548D3 /* exampleBookExplorer */;
+			baseConfigurationReferenceRelativePath = Sources/App/Configuration/Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -393,6 +458,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -408,6 +474,9 @@
 				DEVELOPMENT_TEAM = C7CWQ952KF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = exampleBookExplorer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Book Explorer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,6 +506,9 @@
 				DEVELOPMENT_TEAM = C7CWQ952KF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = exampleBookExplorer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Book Explorer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

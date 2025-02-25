@@ -7,6 +7,8 @@ import Swinject
 class RemoteDataSourceAssembly: Assembly {
     
     func assemble(container: Container) {
-
+        container.register(VolumeDataSource.self) { resolver in
+            VolumeDataSourceRemote()
+        }
     }
 }
