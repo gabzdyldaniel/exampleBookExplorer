@@ -4,7 +4,7 @@
 import Foundation
 
 
-extension String {
+public extension String {
     
     func toDate() -> Date? {
         let formats = ["yyyy-MM-dd", "yyyy"]

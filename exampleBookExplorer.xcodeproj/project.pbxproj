@@ -18,26 +18,23 @@
 			remoteGlobalIDString = 76CDAEEB2D68B52B00D548D3;
 			remoteInfo = exampleBookExplorer;
 		};
-		76CDAF072D68B52D00D548D3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 76CDAEE42D68B52B00D548D3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 76CDAEEB2D68B52B00D548D3;
-			remoteInfo = exampleBookExplorer;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		76CDAEEC2D68B52B00D548D3 /* exampleBookExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exampleBookExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CDAEFC2D68B52D00D548D3 /* exampleBookExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exampleBookExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		76CDAF062D68B52D00D548D3 /* exampleBookExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exampleBookExplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		7626F25C2D6C6EB300305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorerTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Resources/Assets.xcassets,
 				Resources/Localizable.xcstrings,
+				"Sources/Core/Assembly/Assembler+Functions.swift",
+				Sources/Core/Assembly/MockDataSourceAssembly.swift,
+				Sources/Core/Assembly/RemoteDataSourceAssembly.swift,
+				Sources/Core/Assembly/UseCaseAssembly.swift,
 				Sources/Core/Network/HTTPClient.swift,
 				Sources/Core/Protocols/DTO.swift,
 				Sources/Data/Volume/DataSource/VolumeDataSource.swift,
@@ -56,28 +53,6 @@
 			);
 			target = 76CDAEFB2D68B52D00D548D3 /* exampleBookExplorerTests */;
 		};
-		7626F25D2D6C6EB300305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorerUITests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Resources/Localizable.xcstrings,
-				Sources/Core/Network/HTTPClient.swift,
-				Sources/Core/Protocols/DTO.swift,
-				Sources/Data/Volume/DataSource/VolumeDataSource.swift,
-				Sources/Data/Volume/DataSource/VolumeDataSourceMock.swift,
-				Sources/Data/Volume/DataSource/VolumeDataSourceRemote.swift,
-				Sources/Data/Volume/DTO/VolumeDTO.swift,
-				"Sources/Data/Volume/DTO/VolumeDTO+TestData.swift",
-				Sources/Data/Volume/DTO/VolumesResponseDTO.swift,
-				Sources/Domain/Book/Entity/Book.swift,
-				Sources/Domain/Book/UseCase/BookUseCase.swift,
-				Sources/Presentation/Book/BookCellImage.swift,
-				Sources/Presentation/Book/BookCellView.swift,
-				Sources/Presentation/Book/BookDetailView.swift,
-				Sources/Presentation/Book/BookListView.swift,
-				"Sources/Presentation/Book/BookListView+ViewModel.swift",
-			);
-			target = 76CDAF052D68B52D00D548D3 /* exampleBookExplorerUITests */;
-		};
 		7626F31F2D6C774700305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorer" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -93,7 +68,6 @@
 			exceptions = (
 				7626F31F2D6C774700305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorer" target */,
 				7626F25C2D6C6EB300305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorerTests" target */,
-				7626F25D2D6C6EB300305543 /* Exceptions for "exampleBookExplorer" folder in "exampleBookExplorerUITests" target */,
 			);
 			path = exampleBookExplorer;
 			sourceTree = "<group>";
@@ -101,11 +75,6 @@
 		76CDAEFF2D68B52D00D548D3 /* exampleBookExplorerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = exampleBookExplorerTests;
-			sourceTree = "<group>";
-		};
-		76CDAF092D68B52D00D548D3 /* exampleBookExplorerUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = exampleBookExplorerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -126,13 +95,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76CDAF032D68B52D00D548D3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -141,7 +103,6 @@
 			children = (
 				76CDAEEE2D68B52B00D548D3 /* exampleBookExplorer */,
 				76CDAEFF2D68B52D00D548D3 /* exampleBookExplorerTests */,
-				76CDAF092D68B52D00D548D3 /* exampleBookExplorerUITests */,
 				76CDAEED2D68B52B00D548D3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,7 +112,6 @@
 			children = (
 				76CDAEEC2D68B52B00D548D3 /* exampleBookExplorer.app */,
 				76CDAEFC2D68B52D00D548D3 /* exampleBookExplorerTests.xctest */,
-				76CDAF062D68B52D00D548D3 /* exampleBookExplorerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,29 +165,6 @@
 			productReference = 76CDAEFC2D68B52D00D548D3 /* exampleBookExplorerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		76CDAF052D68B52D00D548D3 /* exampleBookExplorerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 76CDAF162D68B52D00D548D3 /* Build configuration list for PBXNativeTarget "exampleBookExplorerUITests" */;
-			buildPhases = (
-				76CDAF022D68B52D00D548D3 /* Sources */,
-				76CDAF032D68B52D00D548D3 /* Frameworks */,
-				76CDAF042D68B52D00D548D3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				76CDAF082D68B52D00D548D3 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				76CDAF092D68B52D00D548D3 /* exampleBookExplorerUITests */,
-			);
-			name = exampleBookExplorerUITests;
-			packageProductDependencies = (
-			);
-			productName = exampleBookExplorerUITests;
-			productReference = 76CDAF062D68B52D00D548D3 /* exampleBookExplorerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -242,10 +179,6 @@
 						CreatedOnToolsVersion = 16.1;
 					};
 					76CDAEFB2D68B52D00D548D3 = {
-						CreatedOnToolsVersion = 16.1;
-						TestTargetID = 76CDAEEB2D68B52B00D548D3;
-					};
-					76CDAF052D68B52D00D548D3 = {
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = 76CDAEEB2D68B52B00D548D3;
 					};
@@ -271,7 +204,6 @@
 			targets = (
 				76CDAEEB2D68B52B00D548D3 /* exampleBookExplorer */,
 				76CDAEFB2D68B52D00D548D3 /* exampleBookExplorerTests */,
-				76CDAF052D68B52D00D548D3 /* exampleBookExplorerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,13 +217,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		76CDAEFA2D68B52D00D548D3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		76CDAF042D68B52D00D548D3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,13 +240,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76CDAF022D68B52D00D548D3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -329,11 +247,6 @@
 			isa = PBXTargetDependency;
 			target = 76CDAEEB2D68B52B00D548D3 /* exampleBookExplorer */;
 			targetProxy = 76CDAEFD2D68B52D00D548D3 /* PBXContainerItemProxy */;
-		};
-		76CDAF082D68B52D00D548D3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 76CDAEEB2D68B52B00D548D3 /* exampleBookExplorer */;
-			targetProxy = 76CDAF072D68B52D00D548D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -565,40 +478,6 @@
 			};
 			name = Release;
 		};
-		76CDAF172D68B52D00D548D3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C7CWQ952KF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cz.gabzdyldaniel.exampleBookExplorerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = exampleBookExplorer;
-			};
-			name = Debug;
-		};
-		76CDAF182D68B52D00D548D3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C7CWQ952KF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cz.gabzdyldaniel.exampleBookExplorerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = exampleBookExplorer;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -625,15 +504,6 @@
 			buildConfigurations = (
 				76CDAF142D68B52D00D548D3 /* Debug */,
 				76CDAF152D68B52D00D548D3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		76CDAF162D68B52D00D548D3 /* Build configuration list for PBXNativeTarget "exampleBookExplorerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				76CDAF172D68B52D00D548D3 /* Debug */,
-				76CDAF182D68B52D00D548D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
