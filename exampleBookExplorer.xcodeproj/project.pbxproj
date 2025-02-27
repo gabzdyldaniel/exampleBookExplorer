@@ -45,11 +45,11 @@
 				Sources/Data/Volume/DTO/VolumesResponseDTO.swift,
 				Sources/Domain/Book/Entity/Book.swift,
 				Sources/Domain/Book/UseCase/BookUseCase.swift,
-				Sources/Presentation/Book/BookCellImage.swift,
 				Sources/Presentation/Book/BookCellView.swift,
 				Sources/Presentation/Book/BookDetailView.swift,
 				Sources/Presentation/Book/BookListView.swift,
 				"Sources/Presentation/Book/BookListView+ViewModel.swift",
+				Sources/Presentation/Book/BookThumbnailView.swift,
 			);
 			target = 76CDAEFB2D68B52D00D548D3 /* exampleBookExplorerTests */;
 		};

@@ -4,7 +4,7 @@
 import SwiftUI
 
 
-struct BookCellImage: View {
+struct BookThumbnailView: View {
     
     enum `Type` {
         
@@ -77,9 +77,9 @@ struct BookCellImage: View {
 
 
 #Preview("Image", traits: .sizeThatFitsLayout) {
-    BookCellImage(type: .image(Image(.bookThumbnailPlaceholder), .normal))
+    BookThumbnailView(type: .image(Image(.bookThumbnailPlaceholder), .normal))
 }
 
 #Preview("Placeholder", traits: .sizeThatFitsLayout) {
-    BookCellImage(type: .placeholder(Image(.bookThumbnailPlaceholder), .normal))
+    BookThumbnailView(type: .placeholder(Image(.bookThumbnailPlaceholder), .normal))
 }

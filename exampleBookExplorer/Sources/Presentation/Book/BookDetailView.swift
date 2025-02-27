@@ -24,18 +24,16 @@ struct BookDetailView: View {
                 AsyncImage(url: book.thumbnailUrl) { phase in
                     Group {
                         if let image = phase.image {
-                            BookCellImage(
-                                type: .image(image, .normal)
-                            )
+                            BookThumbnailView(type: .image(image, .normal))
                         } else if phase.error != nil {
-                            BookCellImage(
+                            BookThumbnailView(
                                 type: .placeholder(
                                     Image(systemName: "arrow.circlepath"),
                                     .normal
                                 )
                             )
                         } else {
-                            BookCellImage(
+                            BookThumbnailView(
                                 type: .placeholder(
                                     Image(systemName: "book"),
                                     .normal
