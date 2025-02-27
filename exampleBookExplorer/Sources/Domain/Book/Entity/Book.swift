@@ -13,4 +13,5 @@ struct Book: Identifiable {
     let description: String?
     let smallThumbnailUrl: URL?
     let thumbnailUrl: URL?
+    let infoLinkUrl: URL?
 }

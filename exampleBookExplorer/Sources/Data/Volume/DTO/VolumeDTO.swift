@@ -12,6 +12,7 @@ struct VolumeDTO: DTO {
         let publishedDate: String?
         let description: String?
         let imageLinks: ImageLinksDTO?
+        let infoLink: String?
     }
     
     struct ImageLinksDTO: Decodable {
@@ -35,16 +36,17 @@ extension VolumeDTO {
             authors: volumeInfo.authors,
             publishedDate: volumeInfo.publishedDate?.toDate(),
             description: volumeInfo.description,
-            smallThumbnailUrl: url(for: \.smallThumbnail),
-            thumbnailUrl: url(for: \.thumbnail)
+            smallThumbnailUrl: url(from: volumeInfo.imageLinks?.smallThumbnail),
+            thumbnailUrl: url(from: volumeInfo.imageLinks?.thumbnail),
+            infoLinkUrl: url(from: volumeInfo.infoLink)
         )
     }
     
-    private func url(for keyPath: KeyPath<ImageLinksDTO, String?>) -> URL? {
-        guard let urlString = self.volumeInfo.imageLinks?[keyPath: keyPath] else {
+    private func url(from string: String?) -> URL? {
+        guard let string else {
             return nil
         }
         
-        return URL(string: urlString)
+        return URL(string: string)
     }
 }

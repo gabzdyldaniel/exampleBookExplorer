@@ -16,7 +16,8 @@ extension VolumeDTO {
             imageLinks: .init(
                 smallThumbnail: "http://books.google.com/books/content?id=qK3bDAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
                 thumbnail: "http://books.google.com/books/content?id=qK3bDAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-            )
+            ),
+            infoLink: "http://books.google.cz/books?id=Gq_bDAAAQBAJ&dq=inauthor:%22Rowling%22&hl=&source=gbs_api"
         )
     )
     

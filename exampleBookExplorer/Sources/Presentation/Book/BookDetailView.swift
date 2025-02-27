@@ -99,6 +99,19 @@ struct BookDetailView: View {
         .scrollContentBackground(.hidden)
         .navigationTitle(book.title ?? "N/A")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            if let url = book.infoLinkUrl {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        UIApplication.shared.open(url)
+                    } label: {
+                        HStack {
+                            Image(systemName: "arrow.up.forward.app")
+                        }
+                    }
+                }
+            }
+        }
     }
     
     
