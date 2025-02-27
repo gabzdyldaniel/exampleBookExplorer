@@ -11,7 +11,28 @@ An iOS application that allows users to search for books by author and view thei
 
 ## Screenshots
 
-[Screenshots to be added]
+### Initial
+| Light | Dark |
+| ------ | ------ |
+| <img src="https://github.com/user-attachments/assets/cb7d3d94-887e-4738-a310-b1141bc00658" width="340"/> | <img src="https://github.com/user-attachments/assets/e4367590-72ba-4a75-a4c0-6b857edd79dc" width="340"/> |
+
+### No Results
+| Light | Dark |
+| ------ | ------ |
+| <img src="https://github.com/user-attachments/assets/b60ed609-0ec3-4650-b801-94e671cec8ea" width="340"/> | <img src="https://github.com/user-attachments/assets/a9730d3f-272f-449d-a46e-0b6c476d6810" width="340"/> |
+
+
+### List
+
+| Light | Dark |
+| ------ | ------ |
+| <img src="https://github.com/user-attachments/assets/08327e86-37d2-4e49-be7f-e635c1855e05" width="340"/> | <img src="https://github.com/user-attachments/assets/685a4943-38ba-416d-9fc0-5b3a1bb9848d" width="340"/> |
+
+### Detail
+
+| Light | Dark |
+| ------ | ------ |
+| <img src="https://github.com/user-attachments/assets/a60f47f6-c97f-4c68-bbf4-ecbcb40472c1" width="340"/> | <img src="https://github.com/user-attachments/assets/b709797c-8e4c-451c-a913-767b43453668" width="340"/> |
 
 ## Technology Stack
 
