@@ -72,7 +72,6 @@ struct BookListView: View {
             } label: {
                 BookCellView(book: book, namespace: namespace)
             }
-            .listRowBackground(Color.white)
         }
     }
 }
