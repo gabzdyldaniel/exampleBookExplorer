@@ -2,16 +2,16 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "shouldTranslate" : false
     },
     ": " : {
-
+      "shouldTranslate" : false
     },
     "detail.author" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Autor"
           }
         },
@@ -27,7 +27,7 @@
       "localizations" : {
         "cs" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Popis"
           }
         },
@@ -43,7 +43,7 @@
       "localizations" : {
         "cs" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Rok vydání"
           }
         },
