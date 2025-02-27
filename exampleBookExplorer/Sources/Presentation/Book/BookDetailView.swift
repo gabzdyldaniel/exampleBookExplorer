@@ -103,6 +103,7 @@ struct BookDetailView: View {
             if let url = book.infoLinkUrl {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                        UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 0.6)
                         UIApplication.shared.open(url)
                     } label: {
                         HStack {
