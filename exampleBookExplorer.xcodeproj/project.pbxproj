@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76B6D4A42D7EFF8300CB500B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 76B6D4A32D7EFF8300CB500B /* ComposableArchitecture */; };
 		76CDAF3C2D68B8D400D548D3 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 76CDAF3B2D68B8D400D548D3 /* Swinject */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B6D4A42D7EFF8300CB500B /* ComposableArchitecture in Frameworks */,
 				76CDAF3C2D68B8D400D548D3 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +139,7 @@
 			name = exampleBookExplorer;
 			packageProductDependencies = (
 				76CDAF3B2D68B8D400D548D3 /* Swinject */,
+				76B6D4A32D7EFF8300CB500B /* ComposableArchitecture */,
 			);
 			productName = exampleBookExplorer;
 			productReference = 76CDAEEC2D68B52B00D548D3 /* exampleBookExplorer.app */;
@@ -196,6 +199,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				76CDAF3A2D68B8D400D548D3 /* XCRemoteSwiftPackageReference "Swinject" */,
+				76B6D4A22D7EFF8300CB500B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 76CDAEED2D68B52B00D548D3 /* Products */;
@@ -511,6 +515,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		76B6D4A22D7EFF8300CB500B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.18.0;
+			};
+		};
 		76CDAF3A2D68B8D400D548D3 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -522,6 +534,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		76B6D4A32D7EFF8300CB500B /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76B6D4A22D7EFF8300CB500B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
 		76CDAF3B2D68B8D400D548D3 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 76CDAF3A2D68B8D400D548D3 /* XCRemoteSwiftPackageReference "Swinject" */;
