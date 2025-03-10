@@ -13,6 +13,15 @@ struct BookListFeature {
     
     @ObservableState
     struct State: Equatable {
+        
+        enum ViewState: Equatable {
+            case initial
+            case loading
+            case loaded
+            case noResults
+            case error(String)
+        }
+        
         var path = StackState<BookDetailFeature.State>()
         var books: [Book] = []
         var searchText = ""
@@ -31,14 +40,6 @@ struct BookListFeature {
             } else {
                 return .noResults
             }
-        }
-        
-        enum ViewState: Equatable {
-            case initial
-            case loading
-            case loaded
-            case noResults
-            case error(String)
         }
     }
     
@@ -88,7 +89,6 @@ struct BookListFeature {
                     await send(.searchDebounced)
                 }
                 .cancellable(id: CancelID.search, cancelInFlight: true)
-                
             case .searchDebounced:
                 // Only search if there's text
                 guard !state.searchText.isEmpty else {
@@ -98,26 +98,28 @@ struct BookListFeature {
                 state.errorMessage = nil
                 
                 return .run { [searchText = state.searchText] send in
-                    await send(.booksResponse(
-                        TaskResult { try await bookClient.getBooks(searchText) }
-                    ))
+                    await send(
+                        .booksResponse(
+                            TaskResult {
+                                try await bookClient.getBooks(searchText)
+                            }
+                        )
+                    )
                 }
-                
             case let .booksResponse(.success(books)):
                 state.books = books
                 state.isLoading = false
                 return .none
-                
             case let .booksResponse(.failure(error)):
                 state.books = []
                 state.isLoading = false
                 state.errorMessage = error.localizedDescription
                 return .none
-                
             case let .bookTapped(book):
-                state.path.append(BookDetailFeature.State(book: book))
+                state.path.append(
+                    BookDetailFeature.State(book: book)
+                )
                 return .none
-                
             case .path:
                 return .none
             }

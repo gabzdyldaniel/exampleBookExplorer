@@ -119,7 +119,6 @@ struct BookDetailView: View {
 
 // MARK: - Preview
 
-
 #Preview("Book Detail") {
     BookDetailView(
         store: Store(

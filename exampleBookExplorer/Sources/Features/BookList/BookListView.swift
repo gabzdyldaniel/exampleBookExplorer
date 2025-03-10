@@ -7,7 +7,8 @@ import SwiftUI
 
 struct BookListView: View {
     
-    // MARK - Store
+    // MARK: - Store
+    
     let store: StoreOf<BookListFeature>
     
     
@@ -83,7 +84,6 @@ struct BookListView: View {
 
 
 // MARK: - Previews
-
 
 #Preview("Initial State") {
     BookListView(
