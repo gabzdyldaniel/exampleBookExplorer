@@ -1,6 +1,7 @@
 //
 // Created with ❤️ by Daniel Gabzdyl.
 
+import ComposableArchitecture
 import Foundation
 
 
@@ -21,5 +22,14 @@ final class HTTPClient {
                 
         let (data, _) = try await session.data(from: url)
         return try JSONDecoder().decode(T.self, from: data)
+    }
+}
+
+
+extension DependencyValues {
+    
+    var httpClient: HTTPClient {
+        get { self[HTTPClient.self] }
+        set { self[HTTPClient.self] = newValue }
     }
 }

@@ -4,7 +4,7 @@
 import Foundation
 
 
-struct Book: Identifiable {
+struct Book: Identifiable, Equatable {
     
     let id: String
     let title: String?

@@ -2,13 +2,20 @@
 // Created with ❤️ by Daniel Gabzdyl.
 
 import SwiftUI
+import ComposableArchitecture
 
 
 @main
-struct exampleBookExplorerApp: App {
+struct BookExplorerApp: App {
+    
+    let store = Store(
+        initialState: AppFeature.State(),
+        reducer: { AppFeature() }
+    )
+    
     var body: some Scene {
         WindowGroup {
-            BookListView()
+            AppView(store: store)
         }
     }
 }
